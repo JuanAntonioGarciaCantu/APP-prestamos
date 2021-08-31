@@ -1,0 +1,83 @@
+.modal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(59, 59, 73, 0.918);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
+#btn-agregar:checked ~ .modal-agregar {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal .contenedor-modal {
+  width: 60%;
+}
+
+.modal .contenedor-modal .modal-header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header button {
+  background: none;
+  border: none;
+  font-size: 25px;
+}
+
+.modal .contenedor-modal .modal-body {
+  padding: 15px;
+}
+
+.modal .contenedor-modal .modal-body form {
+  text-align: right;
+}
+
+.modal .contenedor-modal .modal-body input[type="text"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 15px;
+  border: none;
+}
+ 
+.modal .contenedor-modal .modal-body button {
+  width: 100px;
+} 
+
+.btn-cerrar, .crud {
+  display: inline-block;
+}
+
+.modal .contenedor-modal .modal-body .crud {
+  width: 100px;
+  height: 35px;
+  position: relative;
+}
+
+.crud button {
+ position: absolute;
+ top: 0;
+ left: 0; 
+}
+
+.btn-cerrar {
+  position: relative;
+  top: -12px;
+}
+
+
+/* botones submit */
+.save, .refresh, .delete{
+  visibility: hidden;
+}

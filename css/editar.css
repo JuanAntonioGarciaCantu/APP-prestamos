@@ -1,0 +1,44 @@
+.main .botones-generales {
+    /* border: 1px solid red; */
+    padding: 15px 0;
+}
+
+.main .botones-generales a {
+    color: #000;
+    text-decoration: none;
+}
+
+.main .form-editar {
+    margin-top: 10px;
+    /* border: 1px solid red; */
+    padding: 20px 0;
+}
+
+.main .form-editar .form-header {
+    /* border: 1px solid blue; */
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+.main .form-editar .form-body {
+    width: 60%;
+    margin: auto;
+    /* border: 1px solid blue; */
+    padding: 10px;
+    text-align: center;
+}
+
+.main .form-editar .form-body form input {
+    width: 100%;
+    display: block;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.main .form-editar .form-body form button {
+    display: inline-block;
+    padding: 10px;
+    margin: 0 10px;;
+}
+
