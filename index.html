@@ -1,156 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Static Template</title>
-  <link rel="stylesheet" href="css/estilos.css" />
-</head>
-
-<body>
-  <header>
-    <div class="contenedor contenedor-header">
-      <img src="img/logo.png" alt="logotipo" />
-      <span>Control de prestamos personales</span>
-    </div>
-  </header>
-
-  <div class="main">
-    <section class="widgets">
-      <div class="contenedor contenedor-widgets">
-        <div class="widget Capital">
-          <h4>Capital total</h4>
-          <i class="fas fa-university"></i>
-          <p>$100000.00</p>
-        </div>
-
-        <div class="widget prestado">
-          <h4>Monto prestado</h4>
-          <i class="fas fa-coins"></i>
-          <p>$100000.00</p>
-        </div>
-
-        <div class="widget clientes">
-          <h4>Clientes</h4>
-          <i class="fas fa-users"></i>
-          <p>1</p>
-        </div>
+  <body>
+    <header>
+      <div class="contenedor contenedor-header">
+        <img src="img/logo.png" alt="logotipo" />
+        <span>Control de prestamos personales</span>
       </div>
-    </section>
+    </header>
 
-    <!-- <section class="botones-generales">
-        <div class="contenedor contenedor-botones-generales">}
-          <input type="checkbox" id="btn-agregar">          
-          <label for="btn-agregar"><i class="fas fa-plus"></i>Agregar prestamo</label>
-          
-          <div class="modal modal-agregar">
-            <div class="contenedor-modal">
-              <div class="modal-header">
-                <h2>Datos de la persona</h2>
-                <label for="btn-agregar"><i class="far fa-times-circle"></i></label>          
-              </div>
-              <div class="modal-body">
-                <form action="">
-                  <input type="text" placeholder="Nombre(s)" />
-                  <input type="text" placeholder="Apellidos" />
-                  <input type="text" placeholder="Correo" />
-                  <input type="text" placeholder="telefono" />
-                  <input type="text" placeholder="Monto del prestamo" />
-                  <label for="btn-agregar">Cancelar</label>
-                  <button type="submit">Guardar</button>
-                </form>
-              </div>
-            </div>
+    <div class="main">
+      <section class="widgets">
+        <div class="contenedor contenedor-widgets">
+          <div class="widget">
+            <h4>Capital total</h4>
+            <i class="fas fa-university"></i>
+            <p>$100000.00</p>
+          </div>
+
+          <div class="widget">
+            <h4>Monto prestado</h4>
+            <i class="fas fa-coins"></i>
+            <p>$100000.00</p>
+          </div>
+
+          <div class="widget">
+            <h4>Clientes</h4>
+            <i class="fas fa-users"></i>
+            <p>1</p>
           </div>
         </div>
+      </section>
 
-        
-    
-      </section> -->
-
-    <section class="botones-generales">
-      <div class="contenedor contenedor-botones-generales">
-        <!-- <input type="checkbox" id="btn-agregar">          
-          <label for="btn-agregar"><i class="fas fa-plus"></i>Agregar prestamo</label> -->
-
-        <button class="btn abrir-modal" id="abrir-modal"><i class="fas fa-plus"></i>Agregar prestamo</button>
-      </div>
-    </section>
-
-
-    <div class="modal modal-agregar" id="modal">
-      <div class="contenedor-modal">
-        <div class="modal-header">
-          <h2 id="titulo-modal"></h2>
-          <!-- <label for="btn-agregar"><i class="far fa-times-circle"></i></label>           -->
-          <button class="btn btn-cerrar" id="cerrar-modal"><i class="fas fa-times-circle"></i></button>
+      <section class="btn-agregar">
+        <div class="contenedor contenedor-botones-generales">
+          <button class="btn" onclick="abrirModal(1)">
+            <i class="fas fa-plus"></i>Agregar prestamo
+          </button>
         </div>
-        <div class="modal-body">
-          <form action="">
-            <input type="text" placeholder="Nombre(s)" />
-            <input type="text" placeholder="Apellidos" />
-            <input type="text" placeholder="Correo" />
-            <input type="text" placeholder="telefono" />
-            <input type="text" placeholder="Monto del prestamo" />
-            <!-- <label for="btn-agregar">Cancelar</label> -->
-            <button type="button" class="btn btn-cerrar" id="cerrar-modal">Cancelar</button>
-            <div class="crud">
-              <button type="submit" class="btn btn-crud save" id="btn-save">Guardar</button>
-              <button type="submit" class="btn btn-crud refresh" id="btn-refresh">Actualizar</button>
-              <button type="submit" class="btn btn-crud delete" id="btn-delete">Eliminar</button>
-            </div>
-          </form>
+      </section>
+
+      <div class="modal">
+        <div class="contenedor-modal">
+          <div class="modal-header">
+            <h2 id="titulo-modal"></h2>
+            <button class="btn btn-cerrar" id="cerrar-modal">
+              <i class="fas fa-times-circle"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="">
+              <input type="text" placeholder="Nombre(s)" />
+              <input type="text" placeholder="Apellidos" />
+              <input type="text" placeholder="Correo" />
+              <input type="text" placeholder="telefono" />
+              <input type="text" placeholder="Monto del prestamo" />
+              <button type="button" class="btn btn-cerrar" id="cerrar-modal">
+                Cancelar
+              </button>
+              <div class="crud">
+                <button type="submit" class="btn btn-crud save" id="btn-save">
+                  Guardar
+                </button>
+                <button
+                  type="submit"
+                  class="btn btn-crud refresh"
+                  id="btn-refresh"
+                >
+                  Actualizar
+                </button>
+                <button
+                  type="submit"
+                  class="btn btn-crud delete"
+                  id="btn-delete"
+                >
+                  Eliminar
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
 
-    <section class="tabla">
-      <div class="contenedor contenedor-tabla">
-        <table border="1">
-          <thead>
-            <tr>
-              <th colspan="4">
-                Prestamos
-              </th>
-            </tr>
-            <tr>
-              <th>#</th>
-              <th>Nombre</th>
-              <th>Cantidad</th>              
-              <th>Pagos</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Juan</td>
-              <td>$3000</td>              
-              <td>0 / 10</td>
-              <td>
-                <!-- <a href="editar.html">
+      <section class="tabla">
+        <div class="contenedor contenedor-tabla">
+          <table border="1">
+            <thead>
+              <tr>
+                <th colspan="4">
+                  Prestamos
+                </th>
+              </tr>
+              <tr>
+                <th>#</th>
+                <th>Nombre</th>
+                <th>Cantidad</th>
+                <th>Pagos</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Juan</td>
+                <td>$3000</td>
+                <td>0 / 10</td>
+                <td>
+                  <button
+                    class="btn abrir-modal"
+                    id="abrir-edit"
+                    onclick="abrirModal(2)"
+                  >
                     <i class="fas fa-edit"></i>
-                  </a> -->
-                <button class="btn abrir-modal" id="abrir-edit"><i class="fas fa-edit"></i></button>
-                <button class="btn abrir-modal" id="abrir-delete"><i class="fas fa-trash"></i></button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-  </div>
-
-  <footer>
-    <div class="contenedor contenedor-footer">
-      <cite>GC App´s / 2021</cite>
+                  </button>
+                  <button
+                    class="btn abrir-modal"
+                    id="abrir-delete"
+                    onclick="abrirModal(3)"
+                  >
+                    <i class="fas fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Juan</td>
+                <td>$3000</td>
+                <td>0 / 10</td>
+                <td>
+                  <button
+                    class="btn abrir-modal"
+                    id="abrir-edit"
+                    onclick="abrirModal(2)"
+                  >
+                    <i class="fas fa-edit"></i>
+                  </button>
+                  <button
+                    class="btn abrir-modal"
+                    id="abrir-delete"
+                    onclick="abrirModal(3)"
+                  >
+                    <i class="fas fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
     </div>
-  </footer>
 
-  <script src="https://kit.fontawesome.com/9fbd14239f.js" crossorigin="anonymous"></script>
-  <script src="js/modal.js"></script>
-</body>
+    <footer>
+      <div class="contenedor contenedor-footer">
+        <cite>GC App´s / 2021</cite>
+      </div>
+    </footer>
 
+    <script
+      src="https://kit.fontawesome.com/9fbd14239f.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/modal.js"></script>
+  </body>
 </html>

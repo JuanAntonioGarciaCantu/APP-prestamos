@@ -23,7 +23,7 @@ body {
 }
 
 button:hover {
-  cursor:pointer;
+  cursor: pointer;
 }
 
 /* header */
@@ -74,6 +74,10 @@ header img {
 
 .main .contenedor-widgets .widget p {
   font-size: 20px;
+}
+
+.btn-agregar {
+  border: 1px solid red;
 }
 
 .main .contenedor-botones-generales {
